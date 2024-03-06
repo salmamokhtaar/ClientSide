@@ -44,7 +44,7 @@ import 'react-toastify/dist/ReactToastify.css';
     data.skills = selectedOption;
     // console.log(data)
     // from db mongodb atlas
-    fetch("http://localhost:5000/post-job",{
+    fetch("https://serverside-muom.onrender.com/post-job",{
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(data)

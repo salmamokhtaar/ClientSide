@@ -14,7 +14,7 @@ function Login2() {
   
   const handleLogin = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:5000/user/login', {
+    axios.post('https://serverside-muom.onrender.com/user/login', {
       "email": email,
       "password": password
     }).then((response) => {

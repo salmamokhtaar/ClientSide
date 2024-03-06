@@ -32,7 +32,7 @@ function SingUp() {
             alert("Please enter a valid Gmail address.");
             return;
         }
-        axios.post('http://localhost:5000/user/register', {
+        axios.post('https://serverside-muom.onrender.com/user/register', {
             "username": username,
             "email": email,
             "password": password

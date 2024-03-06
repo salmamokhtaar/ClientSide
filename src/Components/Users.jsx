@@ -16,7 +16,7 @@ function Users() {
  
   useEffect(() =>{
     setLoading(true)
-    fetch(`http://localhost:5000/get-user`)
+    fetch(`https://serverside-muom.onrender.com/get-user`)
     .then(res => res.json()).then(data => {
       setUsers(data)
       setLoading(false)
@@ -52,7 +52,7 @@ function Users() {
   //  kii hore
   const handleDelete = (id) => {
     // console.log(id)
-    fetch(`http://localhost:5000/user/${id}`,{
+    fetch(`https://serverside-muom.onrender.com/user/${id}`,{
       method: 'DELETE' 
     })
     .then(res => res.json)

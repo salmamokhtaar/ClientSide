@@ -15,7 +15,7 @@ const Home = () => {
 
       useEffect(()=>{
         setIsLoading(true)
-        fetch("http://localhost:5000/all-jobs").then(res=> res.json()).then(data =>{
+        fetch("https://serverside-muom.onrender.com/all-jobs").then(res=> res.json()).then(data =>{
           setjobs(data)
           setIsLoading(false)
         })

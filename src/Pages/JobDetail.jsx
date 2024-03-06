@@ -8,7 +8,7 @@ const JobDetail = () => {
     const [job,setJobs] = useState([])
     const [email, setEmail] = useState([""])
     useEffect(()=> {
-        fetch(`http://localhost:5000/all-jobs/${id}`)
+        fetch(`https://serverside-muom.onrender.com/all-jobs/${id}`)
         .then(res => res.json())
         .then((data) => setJobs(data))
     },[])
@@ -35,7 +35,7 @@ const JobDetail = () => {
         return;
       }
       // If email is valid, send the request
-      axios.post('http://localhost:5000/user/Applicant', {
+      axios.post('https://serverside-muom.onrender.com/user/Applicant', {
         "email": email
       }).then(() => {
           alert("Email Sent Successfully");

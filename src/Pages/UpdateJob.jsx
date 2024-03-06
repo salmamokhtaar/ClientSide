@@ -26,7 +26,7 @@ const UpdateJob = () => {
     data.skills = selectedOption;
     // console.log(data)
     // from db mongodb atlas
-    fetch(`http://localhost:5000/update-job/${id}`,{
+    fetch(`https://serverside-muom.onrender.com/update-job/${id}`,{
       method: 'PATCH',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(data)

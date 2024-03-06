@@ -5,7 +5,7 @@ const ApplicantsList = () => {
   const [applicants, setApplicants] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/get/applicants')
+    axios.get('https://serverside-muom.onrender.com/get/applicants')
       .then(response => {
         setApplicants(response.data);
       })

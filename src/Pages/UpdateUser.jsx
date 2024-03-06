@@ -38,7 +38,7 @@ const UpdateUser = () => {
 //   });
 // }
 const onSubmit = (data) => {
-fetch(`http://localhost:5000/single/user/${id}`, {
+fetch(`https://serverside-muom.onrender.com/single/user/${id}`, {
     method: 'PUT',
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify(data)

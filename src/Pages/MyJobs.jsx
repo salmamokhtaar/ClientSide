@@ -17,7 +17,7 @@ const MyJobs = () => {
  
   useEffect(() =>{
     setLoading(true)
-    fetch(`http://localhost:5000/myJobs/salma@gmail.com`)
+    fetch(`https://serverside-muom.onrender.com/myJobs/salma@gmail.com`)
     .then(res => res.json()).then(data => {
       setJobs(data)
       setLoading(false)
