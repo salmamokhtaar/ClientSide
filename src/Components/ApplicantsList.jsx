@@ -15,22 +15,14 @@ const ApplicantsList = () => {
   }, []);
 
   const sendConfirmation = (email) => {
-    alert(`Sending confirmation to ${email}`);
-       const sendEmail = (e) => {
-      e.preventDefault();
-  
-      emailjs.sendForm('service_46unuxv', 'template_slg0tgl', form.current, 'xvYuGiqqJHFUMZkN2')
-        .then((result) => {
-toast.success('waxan kugu soo jawabi donaa sida ugu dhaqsiga badan')
-            console.log(result.text);
-        }, (error) => {
-            toast.error('sorry magudbin fariintadu')
-             console.log(error.text);
-        });
-    };
-
-    // Implement your logic to send confirmation message to the email
-    // For example, you can use an email service like Nodemailer or an API for sending emails
+    axios.post('http://localhost:5000/send-confirmation', { email })
+      .then(response => {
+        alert(`Confirmed email sent to ${email}`);
+      })
+      .catch(error => {
+        console.error('Error sending confirmation email:', error);
+        alert('Failed to send confirmation');
+      });
   };
 
   return (
