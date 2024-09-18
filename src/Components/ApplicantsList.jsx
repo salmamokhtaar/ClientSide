@@ -13,7 +13,8 @@ const ApplicantsList = () => {
         console.error('Error fetching applicants:', error);
       });
   }, []);
-
+  
+// Front
   const sendConfirmation = (email) => {
     axios.post('http://localhost:5000/send-confirmation', { email })
       .then(response => {
@@ -41,7 +42,7 @@ const ApplicantsList = () => {
               <td className='border px-4 py-2'>{applicant.email}</td>
               <td className='border px-4 py-2'>
                 {applicant.email && (
-                  <button onClick={() => sendConfirmation(applicant.email)}>Send Confirmation</button>
+                  <button onClick={() => sendConfirmation(applicant.email)}>Send Email</button>
                 )}
               </td>
             </tr>
