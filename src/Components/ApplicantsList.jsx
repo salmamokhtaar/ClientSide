@@ -33,7 +33,7 @@ const ApplicantsList = () => {
         <thead>
           <tr>
             <th className='border px-4 py-2'>Email</th>
-            <th className='border px-4 py-2'>Actions</th>
+            <th className='border px-4 py-2'>Send Email</th>
           </tr>
         </thead>
         <tbody>
