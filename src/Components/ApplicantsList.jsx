@@ -42,7 +42,7 @@ const ApplicantsList = () => {
               <td className='border px-4 py-2'>{applicant.email}</td>
               <td className='border px-4 py-2'>
                 {applicant.email && (
-                  <button onClick={() => sendConfirmation(applicant.email)}>Send Email</button>
+                  <button onClick={() => sendConfirmation(applicant.email)}>Send Email to Applicants</button>
                 )}
               </td>
             </tr>
